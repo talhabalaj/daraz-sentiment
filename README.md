@@ -1,4 +1,5 @@
 ## Sentiment analysis of Daraz Product Reviews
+Note: This is my first ML Project, so I am not very good at it.
 ### Introduction
 Daraz is the leading online marketplace in South Asia, empowering tens of thousands of sellers to connect with millions of customers. Daraz provides immediate and easy access to 22 million products in 100+ categories to deliver more than 2 million packages every month to all corners of the country.
 
