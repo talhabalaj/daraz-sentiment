@@ -22,7 +22,7 @@ def clean_text(text):
 
 data = []
 
-file = open(f'scrapped_{config.data_dir}.csv', 'w')
+file = open(f'../data/scrapped_data.csv', 'w')
 c = 0
 t = 0
 

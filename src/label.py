@@ -6,7 +6,7 @@ from tqdm import tqdm
 sia = SentimentIntensityAnalyzer()
 
 
-data = csv.reader(open('cleaned_data.csv', 'r'))
+data = csv.reader(open('./../data/cleaned_data.csv', 'r'))
 new_data = [['reviews', 'cleaned_reviews', 'label']]
 
 
@@ -26,4 +26,4 @@ for idx, each in tqdm(enumerate(data)):
   ss = sia.polarity_scores(review)
   new_data.append([review, cleaned, normalize(ss['compound'])])
 
-csv.writer(open('cleaned_data_labeled.csv', 'w')).writerows(new_data)
+csv.writer(open('../data/cleaned_data_labeled.csv', 'w')).writerows(new_data)

@@ -1,7 +1,6 @@
 import json
 import requests
 from typing import List
-from pycld2 import detect
 from datetime import datetime
 from bs4 import BeautifulSoup
 from urllib import parse
@@ -92,10 +91,8 @@ for subcatgory in categories[index].subcategories:
               review_time = datetime.strptime(review_time_str, '%d %b %Y')
               if review_time >= start_date and review_time <= end_date:
                 if review_content:
-                  is_reliable, _, details = detect(review_content)
-                  if is_reliable and details[0][1] == 'en':
-                    reviews_wanted.append(review_item)
-                    reviews_grabbed += 1
+                  reviews_wanted.append(review_item)
+                  reviews_grabbed += 1
             except ValueError:
               # i dont need the review as date will not be parseable to recent review
               # shown as 4 weeks ago, etc. I am fetching old reviews so i'll be fine

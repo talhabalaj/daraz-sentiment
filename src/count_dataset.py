@@ -7,4 +7,4 @@ for each in glob(f'{data_dir}/*.json'):
   with open(each) as f:
     count += len(json.loads(f.read()))
 
-print(count)
+print(count, end='\r')
